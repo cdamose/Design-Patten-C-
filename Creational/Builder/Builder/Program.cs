@@ -1,4 +1,5 @@
-﻿using Builder.NonFluentBuilder;
+﻿using Builder.FlunetBuilder.Model;
+using Builder.NonFluentBuilder;
 using System;
 
 namespace Builder
@@ -13,7 +14,8 @@ namespace Builder
             builder.AddChild("li", "two");
             builder.AddChild("li", "three");
             Console.WriteLine(builder.ToString());
-
+            //call fluent buiilder pattern
+            Employee emp= Employee.New.SetName("AMOSE").WorkingAs("Architect").Build();
         }
     }
 }
